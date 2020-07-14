@@ -1,0 +1,22 @@
+version: '2'
+services:
+  server:
+    build:
+      context: ./server/
+    command: /usr/app/node_modules/.bin/nodemon src/index.js
+    volumes:
+      - ./server/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "8080:8080"
+    environment:
+      PLATFORM:
+      PROFILE:
+  secretless-broker:
+    image: cyberark/secretless-broker:latest
+    ports:
+      - "8051:8051"
+    volumes:
+      - ./secretless-broker/secretless.yml:/secretless.yml
+    environment:
+      TRN_API_KEY:

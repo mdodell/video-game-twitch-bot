@@ -1,0 +1,20 @@
+{
+  "name": "video-game-twitch-bot",
+  "version": "1.0.0",
+  "description": "A Twitch Bot that gets video game stats from APIs.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mitchell Dodell",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "requests": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
